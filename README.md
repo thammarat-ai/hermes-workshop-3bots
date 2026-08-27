@@ -57,6 +57,9 @@ workshop_kit/
 │   └── sample_lecture.pdf   ← ไฟล์ PDF ตัวอย่างให้นิสิตลองสรุป
 ├── workshop_slide.pptx      ← สไลด์ Intro 6 หน้า (เปิดใน PowerPoint)
 ├── workshop_slide.html      ← สไลด์ Intro (สำรอง เปิดในเบราว์เซอร์)
+├── slides/                   ← 📚 สไลด์เสริมประกอบการสอน
+│   ├── 1-The_Evolution_of_AI_Agents.pptx      ← วิวัฒนาการของ AI Agents (13 หน้า)
+│   └── 2-Hermes_AI_Student_OS.pptx            ← Hermes AI Student OS (14 หน้า)
 └── make_slide.py / make_pdf.py  ← สคริปต์สร้างไฟล์ด้านบน (เผื่อแก้เนื้อหา)
 ```
 
@@ -72,6 +75,19 @@ workshop_kit/
 5. (ตัวต่อขยาย) ตั้ง Routine ให้บอทสรุปตารางทุกเช้าเอง
 
 📖 รายละเอียดฉบับเต็มอยู่ใน `student_setup.md` และ `workshop_handout.md`
+
+---
+
+## 📚 สไลด์เสริมประกอบการสอน
+
+ในโฟลเดอร์ `slides/` มีสไลด์สำหรับวิทยากรเปิดอธิบายเพิ่มเติม (นอกเหนือจาก `workshop_slide.pptx`):
+
+| ไฟล์ | เนื้อหา | จำนวนหน้า |
+|------|--------|-----------|
+| `slides/1-The_Evolution_of_AI_Agents.pptx` | วิวัฒนาการของ AI Agents — จากยุคแรกถึง Agent สมัยใหม่ | 13 หน้า |
+| `slides/2-Hermes_AI_Student_OS.pptx` | Hermes AI Student OS — ภาพรวมการใช้ Hermes เป็น OS ส่วนตัวของนิสิต | 14 หน้า |
+
+💡 แนะนำให้นำ 2 สไลด์นี้เปิดก่อน `workshop_slide.pptx` ในช่วง Intro (0–15 นาที) เพื่อปูพื้นฐานแนวคิดก่อนลงมือตั้งบอท
 
 ---
 
