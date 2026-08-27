@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hermes Agent Workshop — 3 Profile Bots</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', 'Sarabun', sans-serif; background: #0f1117; color: #e8eaed; }
+  .slide { width: 100vw; min-height: 100vh; padding: 60px 80px; display: none; flex-direction: column; justify-content: center; }
+  .slide.active { display: flex; }
+  h1 { font-size: 3.2em; margin-bottom: 0.3em; color: #7c9cff; }
+  h2 { font-size: 2.4em; margin-bottom: 0.5em; color: #a78bfa; }
+  p, li { font-size: 1.5em; line-height: 1.6; }
+  ul { margin-left: 1.2em; }
+  .tag { display: inline-block; background: #1e2330; padding: 6px 14px; border-radius: 20px; font-size: 0.9em; margin: 4px; color: #9db4ff; }
+  .bots { display: flex; gap: 30px; margin-top: 30px; flex-wrap: wrap; }
+  .bot { flex: 1; min-width: 260px; background: #1a1f2e; border-radius: 16px; padding: 28px; border-top: 5px solid; }
+  .bot.green { border-color: #34d399; }
+  .bot.blue { border-color: #60a5fa; }
+  .bot.purple { border-color: #c084fc; }
+  .bot h3 { font-size: 1.8em; margin-bottom: 10px; }
+  .bot p { font-size: 1.1em; }
+  .cmd { background: #06080d; color: #7ee787; padding: 8px 14px; border-radius: 8px; font-family: monospace; font-size: 0.95em; display: inline-block; margin-top: 10px; }
+  .nav { position: fixed; bottom: 24px; right: 32px; }
+  .nav button { background: #2a3142; color: #e8eaed; border: none; padding: 12px 22px; border-radius: 10px; font-size: 1em; cursor: pointer; margin-left: 8px; }
+  .nav button:hover { background: #3a455c; }
+  .page { position: fixed; bottom: 24px; left: 32px; color: #6b7280; font-size: 0.9em; }
+  .demo { background: #241a2e; border-left: 5px solid #c084fc; padding: 20px 26px; border-radius: 10px; margin-top: 24px; }
+</style>
+</head>
+<body>
+
+<div class="slide active">
+  <h1>Hermes Agent กับ 3 บอทส่วนตัว</h1>
+  <p>อบรม AI Agent สำหรับนิสิต ICT · 90 นาที</p>
+  <div style="margin-top:20px">
+    <span class="tag">ไม่ต้องเขียนโค้ด</span>
+    <span class="tag">พิมพ์คุยได้งาน</span>
+    <span class="tag">ใช้งานจริงได้ทันที</span>
+  </div>
+</div>
+
+<div class="slide">
+  <h2>AI Agent ต่างจาก ChatGPT ยังไง?</h2>
+  <ul>
+    <li><b>ChatGPT</b> → แค่ตอบข้อความ</li>
+    <li><b>Hermes Agent</b> → มี<b>มือ</b>ทำงานได้จริง: อ่านไฟล์, สร้างสไลด์, วิเคราะห์ข้อมูล, วาดรูป</li>
+    <li>ตั้งเป็น<b>บอทเฉพาะงาน</b>ได้ → แต่ละตัวมีบุคลิกและหน้าที่ของตัวเอง</li>
+  </ul>
+</div>
+
+<div class="slide">
+  <h2>วันนี้เรามี 3 บอทให้นิสิตลองคุย</h2>
+  <div class="bots">
+    <div class="bot green">
+      <h3>🟢 พี่ติว</h3>
+      <p>สรุปบทเรียน · ทำข้อสอบ · ตรวจงาน</p>
+      <div class="cmd">study-coach</div>
+    </div>
+    <div class="bot blue">
+      <h3>🔵 นักวิเคราะห์</h3>
+      <p>วิเคราะห์ข้อมูล · ทำกราฟ · หา insight</p>
+      <div class="cmd">data-analyst</div>
+    </div>
+    <div class="bot purple">
+      <h3>🟣 นักเขียน</h3>
+      <p>ทำสไลด์ · วาดรูปประกอบ</p>
+      <div class="cmd">content-creator</div>
+    </div>
+  </div>
+</div>
+
+<div class="slide">
+  <h2>รูปแบบเวิร์กชอป (90 นาที)</h2>
+  <ul>
+    <li><b>0–20 นาที:</b> Intro + Demo สด</li>
+    <li><b>20–75 นาที:</b> หมุน Station A/B/C (คนละ 18 นาที)</li>
+    <li><b>75–90 นาที:</b> Showcase + Q&A</li>
+  </ul>
+  <div class="demo">
+    <b>Demo พิเศษ (วิทยากร):</b> ปฏิทิน + อีเมลอัตโนมัติ (ต้อง login Google → ไม่ให้ทำบนเครื่องรวม)
+  </div>
+</div>
+
+<div class="slide">
+  <h2>กฎทองใช้ AI Agent</h2>
+  <ul>
+    <li>1. บอก<b>บริบท</b> — ใคร ทำไม ให้ใครดู</li>
+    <li>2. ขอ<b>รูปแบบ</b> — สรุป bullet / ตาราง / สไลด์</li>
+    <li>3. <b>ตรวจเสมอ</b> — AI อาจผิด อย่าเชื่อ 100%</li>
+    <li>4. ห้ามใส่<b>รหัส/ข้อมูลส่วนตัว</b></li>
+  </ul>
+</div>
+
+<div class="slide">
+  <h1>พร้อมลุยกันเลย! 🚀</h1>
+  <p>เปิดแท็บ <b>Bots</b> ใน Hermes Desktop แล้วคุยกับบอททั้ง 3 ตัวได้เลย</p>
+</div>
+
+<div class="page" id="page">1 / 6</div>
+<div class="nav">
+  <button onclick="prev()">← ก่อนหน้า</button>
+  <button onclick="next()">ถัดไป →</button>
+</div>
+
+<script>
+  let cur = 0;
+  const slides = document.querySelectorAll('.slide');
+  function show(i){
+    slides.forEach(s => s.classList.remove('active'));
+    slides[i].classList.add('active');
+    document.getElementById('page').textContent = (i+1) + ' / ' + slides.length;
+  }
+  function next(){ cur = (cur+1) % slides.length; show(cur); }
+  function prev(){ cur = (cur-1+slides.length) % slides.length; show(cur); }
+  document.addEventListener('keydown', e => {
+    if(e.key==='ArrowRight') next();
+    if(e.key==='ArrowLeft') prev();
+  });
+</script>
+</body>
+</html>
