@@ -13,7 +13,7 @@
 - [ ] กดปุ่ม **"+" ในแท็บ Bots** → สร้าง `study-coach` (พี่ติว) + แปะ SOUL.md จาก `bots/study-coach/SOUL.md`
 - [ ] สร้าง `data-analyst` (นักวิเคราะห์) + แปะ SOUL.md จาก `bots/data-analyst/SOUL.md`
 - [ ] สร้าง `content-creator` (นักเขียน) + แปะ SOUL.md จาก `bots/content-creator/SOUL.md`
-- [ ] (ตอนสร้าง) เลือก Model `tencent/hy3:free` และ Provider `nous` ถ้าระบบถาม
+- [ ] (ตอนสร้าง) เลือก **โมเดลฟรี** เท่านั้น (เช่น `hy3-free` / `opencode-free` หรือ `tencent/hy3:free` / `nous` — ขึ้นกับเวอร์ชั่น) — ห้ามเลือกโมเดลที่ไม่มีคำว่า "free" เพราะจะเสียเงิน
 - [ ] แนบไฟล์ `data/sample_sales.csv` ไว้ใช้ตอนไหนก็ได้
 - [ ] แนบไฟล์ `data/sample_lecture.pdf` ไว้ใช้ตอนไหนก็ได้
 
